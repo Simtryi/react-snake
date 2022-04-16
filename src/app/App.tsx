@@ -4,6 +4,8 @@ import { store } from './store'
 import './App.less'
 
 import Header from './components/header'
+import Game from './components/game'
+import Info from './components/info'
 import Keyboard from "./components/keyboard";
 
 interface IProps {}
@@ -30,7 +32,8 @@ export default class App extends React.Component<IProps, IState> {
                             <div className="content">
                                 <div className="main">
                                     <div className="screen">
-
+                                        <Game />
+                                        <Info />
                                     </div>
                                 </div>
                             </div>
