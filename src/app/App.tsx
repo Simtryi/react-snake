@@ -3,6 +3,8 @@ import { Provider } from 'react-redux'
 import { store } from './store'
 import './App.less'
 
+import Header from './components/header'
+
 interface IProps {}
 
 interface IState {}
@@ -21,6 +23,9 @@ export default class App extends React.Component<IProps, IState> {
                 <div className="app" onKeyDown={this.handleKeyDown} tabIndex={0}>
                     <div className="layout">
                         <div className="layout-top">
+                            <div className="header">
+                                <Header />
+                            </div>
                             <div className="content">
                                 <div className="main">
                                     <div className="screen">
@@ -28,6 +33,10 @@ export default class App extends React.Component<IProps, IState> {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="layout-bottom">
+
                         </div>
                     </div>
                 </div>
