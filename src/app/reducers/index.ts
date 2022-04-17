@@ -1,4 +1,6 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import counter from "./counterSlice";
+import {combineReducers} from "@reduxjs/toolkit";
+import game from "./gameSlice"
+import snake from "./snakeSlice";
+import food from "./foodSlice";
 
-export default combineReducers({ counter })
+export default combineReducers({game, snake, food})
