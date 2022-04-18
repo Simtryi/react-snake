@@ -1,22 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import Direction from "../enums/direction";
-
-/**
- * 坐标
- */
-export interface IPosition {
-    x: number
-    y: number
-}
-
-/**
- * 蛇
- */
-export interface ISnake {
-    positions: IPosition[]      //  蛇的位置
-    currentDirection: Direction //  蛇的当前方向
-    nextDirection: Direction    //  蛇的下一个方向
-}
+import Position from "../model/position";
+import ISnake from "../model/snake";
 
 const initialState: ISnake = {
     positions: [{
@@ -42,7 +27,7 @@ export const snakeSlice = createSlice({
         },
 
         //  设置蛇的位置
-        setPositions: (state: ISnake, action: PayloadAction<IPosition[]>) => {
+        setPositions: (state: ISnake, action: PayloadAction<Position[]>) => {
             state.positions = action.payload
         },
 

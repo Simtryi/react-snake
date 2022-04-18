@@ -1,3 +1,6 @@
+/**
+ * 方向
+ */
 enum Direction {
     UP = "UP",          //  上
     DOWN = "DOWN",      //  下

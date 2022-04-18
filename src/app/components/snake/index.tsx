@@ -1,16 +1,20 @@
 import {FC} from "react";
-import {IPosition} from "../../reducers/snakeSlice";
+import ISnake from "../../model/snake";
+import Position from "../../model/position";
 import "./index.less";
 
 interface IProps {
-   positions: IPosition[]
+   snake: ISnake
 }
 
+/**
+ * 蛇
+ */
 const Snake: FC<IProps> = (props: IProps) => {
     return (
-        <div>
+        <div className="snake">
             {
-                props.positions.map((position: IPosition, index: number) => {
+                props.snake.positions.map((position: Position, index: number) => {
                     let style = {
                         left: `${position.x}%`,
                         top: `${position.y}%`

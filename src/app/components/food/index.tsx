@@ -1,15 +1,18 @@
 import {FC} from "react";
+import IFood from "../../model/food";
 import './index.less'
-import {IPosition} from "../../reducers/snakeSlice";
 
 interface IProps {
-    position: IPosition
+    food: IFood
 }
 
+/**
+ * 食物
+ */
 const Food: FC<IProps> = (props: IProps) => {
     let style = {
-        left: `${props.position.x}%`,
-        top: `${props.position.y}%`
+        left: `${props.food.position.x}%`,
+        top: `${props.food.position.y}%`
     }
     return <div className="food" style={style} />
 }

@@ -1,12 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {IPosition} from "./snakeSlice";
-
-/**
- * 食物
- */
-export interface IFood {
-    position: IPosition //  食物的位置
-}
+import IFood from "../model/food";
 
 const initialState: IFood = {
     position: {
